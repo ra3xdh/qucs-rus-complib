@@ -1,0 +1,50 @@
+<Qucs Library 0.0.15 "RusComparator">
+
+<Component K521SA3>
+
+<Description>
+Компаратор К521СА3. Корпус ТО-99.
+</Description>
+
+<Model>
+.Def:RusComparator_K521SA3 _net1 _net2 _net3 _net4 _net5 _net6
+R:RP _net3 _net4 R="6122"
+Diode:DP _net3 _net4 Is="8e-16" Rs="1" N="1" M="0.5" Cj0="1e-14" Vj="0.7"
+BJT:Q5 _net11 _net5 _net6 gnd Type="npn" Is="8e-16" Bf="34490" Cjc="1e-15" Tf="3.646e-10" Tr="7.934e-08" Nf="1" Nr="1" Ikf="0" Ikr="0" Vaf="0" Var="0" Ise="0" Ne="1.5" Isc="0" Nc="2" Br="1" Rbm="0" Irb="0" Cje="0" Vje="0.75" Mje="0.33" Vjc="0.75" Mjc="0.33" Xcjc="1" Cjs="0" Vjs="0.75" Mjs="0" Fc="0.5" Vtf="0" Xtf="0" Itf="0"
+Vdc:V1 _cnet0 _net11 U="0"
+VCVS:E1 _net9 _net10 _net6 _net4 G="1"
+BJT:Q4 _net8 _net8 _net4 gnd Type="npn" Is="8e-16" Bf="1002" Nf="1" Nr="1" Ikf="0" Ikr="0" Vaf="0" Var="0" Ise="0" Ne="1.5" Isc="0" Nc="2" Br="1" Rbm="0" Irb="0" Cje="0" Vje="0.75" Mje="0.33" Cjc="0" Vjc="0.75" Mjc="0.33" Xcjc="1" Cjs="0" Vjs="0.75" Mjs="0" Fc="0.5" Vtf="0" Tf="0" Xtf="0" Itf="0" Tr="0"
+BJT:Q3 _net8 _net9 _net4 gnd Type="npn" Is="8e-16" Bf="1000" Cjc="1e-15" Tr="1.188e-07" Nf="1" Nr="1" Ikf="0" Ikr="0" Vaf="0" Var="0" Ise="0" Ne="1.5" Isc="0" Nc="2" Br="1" Rbm="0" Irb="0" Cje="0" Vje="0.75" Mje="0.33" Vjc="0.75" Mjc="0.33" Xcjc="1" Cjs="0" Vjs="0.75" Mjs="0" Fc="0.5" Vtf="0" Tf="0" Xtf="0" Itf="0"
+BJT:Q2 _net22 _net8 _net7 gnd Type="pnp" Is="8e-16" Bf="833.3" Nf="1" Nr="1" Ikf="0" Ikr="0" Vaf="0" Var="0" Ise="0" Ne="1.5" Isc="0" Nc="2" Br="1" Rbm="0" Irb="0" Cje="0" Vje="0.75" Mje="0.33" Cjc="0" Vjc="0.75" Mjc="0.33" Xcjc="1" Cjs="0" Vjs="0.75" Mjs="0" Fc="0.5" Vtf="0" Tf="0" Xtf="0" Itf="0" Tr="0"
+BJT:Q1 _net21 _net9 _net7 gnd Type="pnp" Is="8e-16" Bf="833.3" Nf="1" Nr="1" Ikf="0" Ikr="0" Vaf="0" Var="0" Ise="0" Ne="1.5" Isc="0" Nc="2" Br="1" Rbm="0" Irb="0" Cje="0" Vje="0.75" Mje="0.33" Cjc="0" Vjc="0.75" Mjc="0.33" Xcjc="1" Cjs="0" Vjs="0.75" Mjs="0" Fc="0.5" Vtf="0" Tf="0" Xtf="0" Itf="0" Tr="0"
+Vdc:VI2 _net22 _net2 U="0.45"
+Vdc:VI1 _net21 _net1 U="0.45"
+Idc:IEE _net7 _net3 I="0.0001"
+CCCS:F1 _net10 _net9 _net3 _cnet0 G="1"
+.Def:End
+</Model>
+
+<Symbol>
+  <Line -10 -50 70 30 #000080 2 1>
+  <Line -10 0 -40 0 #000000 0 1>
+  <Line -10 -40 -40 0 #000000 0 1>
+  <Text 0 -30 12 #000000 0 "==">
+  <Line -10 10 70 -30 #000080 2 1>
+  <Line 60 -20 40 0 #000000 0 1>
+  <.PortSym 100 -20 5 180>
+  <.PortSym 100 20 6 180>
+  <Line 100 20 -50 0 #000000 0 1>
+  <Line 50 20 -10 0 #000000 0 1>
+  <Line 40 20 0 -30 #000000 0 1>
+  <Line 10 50 0 -50 #000000 0 1>
+  <Line 10 -90 0 50 #000000 0 1>
+  <.PortSym 10 -90 3 180>
+  <.PortSym 10 51 4 180>
+  <Line -10 10 0 -60 #000080 2 1>
+  <Ellipse -14 -4 8 8 #000000 0 1 #c0c0c0 1 0>
+  <.PortSym -50 -40 1 0>
+  <.PortSym -50 0 2 0>
+  <.ID 30 -66 DA>
+</Symbol>
+
+</Component>
