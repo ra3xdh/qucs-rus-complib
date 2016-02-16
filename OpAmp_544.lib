@@ -128,7 +128,7 @@ Sub:X1 _net2 _net3 _net0 _net4 _net1 gnd Type="n544ud1_cir"
 Authors: Vadim Kuznetsov <ra3xdh@gmail.com> and Timofey Moiseev <voig1396@gmail.com>
   </Description>
   <Spice>
-.subckt OpAmp_544_k544ud2 gnd 1 2 3 4 5 6 7
+.subckt OpAmp_544_544ud2 gnd 1 2 3 4 5 6 7
 c1   11 12 174.6E-15
 dc    5 53 dx
 de   54  5 dx
