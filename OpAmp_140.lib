@@ -5,7 +5,7 @@
 Authors: Vadim Kuznetsov <ra3xdh@gmail.com> and Timofey Moiseev <voig1396@gmail.com>
   </Description>
   <Spice>
-.subckt	OpAmp_140_140ud11 gnd 1 2 3 4 5
+.subckt	OpAmp_140_K140ud11 gnd 1 2 3 4 5
 *
 c1   11 12 2.469E-12
 c2	6  7 28.00E-12
@@ -134,7 +134,7 @@ Sub:X1 _net0 _net1 _net2 _net3 _net4 gnd Type="n140ud11_cir"
 Authors: Vadim Kuznetsov <ra3xdh@gmail.com> and Timofey Moiseev <voig1396@gmail.com>
   </Description>
   <Spice>
-.subckt OpAmp_140_140UD12 gnd 1 2 3 4 5
+.subckt OpAmp_140_K140UD12 gnd 1 2 3 4 5
 *
 c1   11 12 2.887E-12
 c2	6  7 20.00E-12
@@ -261,7 +261,7 @@ Sub:X1 _net3 _net4 _net0 _net1 _net2 gnd Type="n140ud12_cir"
 Authors: Vadim Kuznetsov <ra3xdh@gmail.com> and Timofey Moiseev <voig1396@gmail.com>
   </Description>
   <Spice>
-.subckt OpAmp_140_140ud17 gnd 1 2 3 4 5
+.subckt OpAmp_140_K140ud17 gnd 1 2 3 4 5
 *
 c1   11 12 2.887E-12
 c2	6  7 30.00E-12
@@ -384,7 +384,7 @@ Sub:X1 _net3 _net4 _net0 _net1 _net2 gnd Type="n140ud17_cir"
 Authors: Vadim Kuznetsov <ra3xdh@gmail.com> and Timofey Moiseev <voig1396@gmail.com>
   </Description>
   <Spice>
-.subckt OpAmp_140_140UD17A gnd 1 2 3 4 5 0 0
+.subckt OpAmp_140_K140UD17A gnd 1 2 3 4 5 0 0
 *
 c1   11 12 8.660E-12
 c2    6  7 67.00E-12
@@ -511,7 +511,7 @@ Sub:X1 _net0 _net1 _net2 _net3 _net4 gnd Type="n140ud17a_cir"
 Authors: Vadim Kuznetsov <ra3xdh@gmail.com> and Timofey Moiseev <voig1396@gmail.com>
   </Description>
   <Spice>
-.subckt OpAmp_140_140UD17B gnd 1 2 3 4 5 0 0
+.subckt OpAmp_140_K140UD17B gnd 1 2 3 4 5 0 0
 *
 c1   11 12 8.660E-12
 c2    6  7 67.00E-12
@@ -639,7 +639,7 @@ Sub:X1 _net0 _net1 _net2 _net3 _net4 gnd Type="n140ud17b_cir"
 Authors: Vadim Kuznetsov <ra3xdh@gmail.com> and Timofey Moiseev <voig1396@gmail.com>
   </Description>
   <Spice>
-.subckt OpAmp_140_140ud18 gnd 1 2 3 4 5
+.subckt OpAmp_140_K140ud18 gnd 1 2 3 4 5
 *
 c1   11 12 174.6E-15
 c2	6  7 20.00E-12
@@ -762,7 +762,7 @@ Sub:X1 _net3 _net4 _net0 _net1 _net2 gnd Type="n140ud18_cir"
 Authors: Vadim Kuznetsov <ra3xdh@gmail.com> and Timofey Moiseev <voig1396@gmail.com>
   </Description>
   <Spice>
-.SUBCKT OpAmp_140_140UD20 gnd 1 2 3 4 5 6 7 8 9
+.SUBCKT OpAmp_140_K140UD20 gnd 1 2 3 4 5 6 7 8 9
  X1 1 2	3 9 4 UD20
  X2 5 6	7 9 8 UD20
 .ENDS
@@ -1020,7 +1020,7 @@ Sub:X1 _net0 _net1 _net2 _net3 _net4 gnd Type="n140ud20a_cir"
 Authors: Vadim Kuznetsov <ra3xdh@gmail.com> and Timofey Moiseev <voig1396@gmail.com>
   </Description>
   <Spice>
-.subckt	OpAmp_140_140ud22 gnd 1 2 3 4 5 6 7
+.subckt	OpAmp_140_K140ud22 gnd 1 2 3 4 5 6 7
 *
 c1   11 12 261.9E-15
 dc	5 53 dx
@@ -1149,7 +1149,7 @@ Sub:X1 _net0 _net1 _net2 _net3 _net4 _net5 _net6 gnd Type="n140ud22_cir"
 Authors: Vadim Kuznetsov <ra3xdh@gmail.com> and Timofey Moiseev <voig1396@gmail.com>
   </Description>
   <Spice>
-.subckt	OpAmp_140_140UD23 gnd 1 2 3 4 5
+.subckt	OpAmp_140_K140UD23 gnd 1 2 3 4 5
 *
 c1   11 12 2.887E-12
 c2	6  7 30.00E-12
@@ -1276,7 +1276,7 @@ Sub:X1 _net3 _net4 _net0 _net1 _net2 gnd Type="n140ud23_cir"
 Authors: Vadim Kuznetsov <ra3xdh@gmail.com> and Timofey Moiseev <voig1396@gmail.com>
   </Description>
   <Spice>
-.subckt OpAmp_140_140ud25a gnd 1 2 3 4 5
+.subckt OpAmp_140_K140ud25a gnd 1 2 3 4 5
 *
 c1   11 12 27.30E-12
 c2	6  7 150.0E-12
@@ -1403,7 +1403,7 @@ Sub:X1 _net3 _net4 _net0 _net1 _net2 gnd Type="n140ud25a_cir"
 Authors: Vadim Kuznetsov <ra3xdh@gmail.com> and Timofey Moiseev <voig1396@gmail.com>
   </Description>
   <Spice>
-.subckt	OpAmp_140_140ud27 gnd 1 2 3 4 5
+.subckt	OpAmp_140_K140ud27 gnd 1 2 3 4 5
 *
 c1   11 12 5.460E-12
 c2	6  7 30.00E-12
@@ -1530,7 +1530,7 @@ Sub:X1 _net3 _net4 _net0 _net1 _net2 gnd Type="n140ud27_cir"
 Authors: Vadim Kuznetsov <ra3xdh@gmail.com> and Timofey Moiseev <voig1396@gmail.com>
   </Description>
   <Spice>
-.subckt	OpAmp_140_140UD5 gnd 1 2 3 4 5 6 7
+.subckt	OpAmp_140_K140UD5 gnd 1 2 3 4 5 6 7
 *
 c1   11 12 2.887E-12
 dc	5 53 dx
@@ -1659,7 +1659,7 @@ Sub:X1 _net0 _net1 _net2 _net3 _net4 _net5 _net6 gnd Type="n140ud5_cir"
 Authors: Vadim Kuznetsov <ra3xdh@gmail.com> and Timofey Moiseev <voig1396@gmail.com>
   </Description>
   <Spice>
-.subckt	OpAmp_140_140UD6A gnd 1 2 3 4 5
+.subckt	OpAmp_140_K140UD6A gnd 1 2 3 4 5
 *
 c1   11 12 8.660E-12
 c2	6  7 20.00E-12
@@ -1788,7 +1788,7 @@ Sub:X1 _net3 _net4 _net0 _net1 _net2 gnd Type="n140ud6a_cir"
 Authors: Vadim Kuznetsov <ra3xdh@gmail.com> and Timofey Moiseev <voig1396@gmail.com>
   </Description>
   <Spice>
-.subckt	OpAmp_140_140UD6B gnd 1 2 3 4 5
+.subckt	OpAmp_140_K140UD6B gnd 1 2 3 4 5
 *
 c1   11 12 2.887E-12
 c2	6  7 20.00E-12
@@ -1915,7 +1915,7 @@ Sub:X1 _net3 _net4 _net0 _net1 _net2 gnd Type="n140ud6b_cir"
 Authors: Vadim Kuznetsov <ra3xdh@gmail.com> and Timofey Moiseev <voig1396@gmail.com>
   </Description>
   <Spice>
-.subckt	OpAmp_140_140ud7 gnd 1 2 3 4 5
+.subckt	OpAmp_140_K140ud7 gnd 1 2 3 4 5
 *
 c1   11 12 2.887E-12
 c2	6  7 20.00E-12
@@ -2042,7 +2042,7 @@ Sub:X1 _net4 _net3 _net0 _net1 _net2 gnd Type="n140ud7_cir"
 Authors: Vadim Kuznetsov <ra3xdh@gmail.com> and Timofey Moiseev <voig1396@gmail.com>
   </Description>
   <Spice>
-.subckt	OpAmp_140_140UD7A gnd 1 2 3 4 5 6 7
+.subckt	OpAmp_140_K140UD7A gnd 1 2 3 4 5 6 7
 *
 c1   11 12 2.887E-12
 dc	5 53 dx
@@ -2171,7 +2171,7 @@ Sub:X1 _net0 _net3 _net1 _net4 _net2 _net5 _net6 gnd Type="n140ud7a_cir"
 Authors: Vadim Kuznetsov <ra3xdh@gmail.com> and Timofey Moiseev <voig1396@gmail.com>
   </Description>
   <Spice>
-.subckt	OpAmp_140_140ud7b gnd 1 2 3 4 5
+.subckt	OpAmp_140_K140ud7b gnd 1 2 3 4 5
 *
 c1   11 12 2.887E-12
 c2	6  7 20.00E-12
@@ -2298,7 +2298,7 @@ Sub:X1 _net3 _net4 _net0 _net1 _net2 gnd Type="n140ud7b_cir"
 Authors: Vadim Kuznetsov <ra3xdh@gmail.com> and Timofey Moiseev <voig1396@gmail.com>
   </Description>
   <Spice>
-.subckt	OpAmp_140_140ud8 gnd 1 2 3 4 5
+.subckt	OpAmp_140_K140ud8 gnd 1 2 3 4 5
 *
 c1   11 12 174.6E-15
 c2	6  7 20.00E-12
@@ -2421,7 +2421,7 @@ Sub:X1 _net3 _net4 _net0 _net1 _net2 gnd Type="n140ud8_cir"
 Authors: Vadim Kuznetsov <ra3xdh@gmail.com> and Timofey Moiseev <voig1396@gmail.com>
   </Description>
   <Spice>
-.subckt	OpAmp_140_140UD8A gnd 1 2 3 4 5
+.subckt	OpAmp_140_K140UD8A gnd 1 2 3 4 5
 *
 c1   11 12 2.887E-12
 c2	6  7 33.00E-12
@@ -2544,7 +2544,7 @@ Sub:X1 _net3 _net4 _net0 _net1 _net2 gnd Type="n140ud8a_cir"
 Authors: Vadim Kuznetsov <ra3xdh@gmail.com> and Timofey Moiseev <voig1396@gmail.com>
   </Description>
   <Spice>
-.subckt	OpAmp_140_140UD8B gnd 1 2 3 4 5
+.subckt	OpAmp_140_K140UD8B gnd 1 2 3 4 5
 *
 c1   11 12 2.887E-12
 c2	6  7 33.00E-12
@@ -2667,7 +2667,7 @@ Sub:X1 _net3 _net4 _net0 _net1 _net2 gnd Type="n140ud8b_cir"
 Authors: Vadim Kuznetsov <ra3xdh@gmail.com> and Timofey Moiseev <voig1396@gmail.com>
   </Description>
   <Spice>
-.subckt	OpAmp_140_140UD9 gnd 1 2 3 4 5 6 7
+.subckt	OpAmp_140_K140UD9 gnd 1 2 3 4 5 6 7
 *
 c1   11 12 2.887E-12
 dc	5 53 dx
