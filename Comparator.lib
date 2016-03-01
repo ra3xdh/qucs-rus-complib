@@ -1,0 +1,74 @@
+<Qucs Library 0.0.18 "Comparator">
+
+<Component LM339>
+  <Description>
+LM339 comparator
+  </Description>
+  <Spice>
+.SUBCKT Comparator_LM339 gnd 1 2 3 4 5
+*
+F1    9  3 V1 1
+IEE   3  7 DC 100.0E-6
+VI1  21  1 DC .75
+VI2  22  2 DC .75
+Q1    9 21  7 QIN
+Q2    8 22  7 QIN
+Q3    9  8  4 QMO
+Q4    8  8  4 QMI
+.MODEL QIN PNP(IS=800.0E-18 BF=2.000E3)
+.MODEL QMI NPN(IS=800.0E-18 BF=1002)
+.MODEL QMO NPN(IS=800.0E-18 BF=1000 CJC=1E-15 TR=807.4E-9)
+E1   10  4  9  4  1
+V1   10 11 DC 0
+Q5    5 11  4 QOC
+.MODEL QOC NPN(IS=800.0E-18 BF=20.29E3 CJC=1E-15 TF=942.6E-12 TR=543.8E-9)
+DP    4  3 DX
+RP 3  4 46.3E3
+.MODEL DX  D(IS=800.0E-18)
+*
+.ENDS
+  </Spice>
+  <Model>
+.Def:Comparator_LM339 _net0 _net4 _net2 _net1 _net3
+Sub:X1 _net0 _net4 _net2 _net1 _net3 gnd Type="LM339_cir"
+.Def:End
+.Def:LM339_cir _net1 _net2 _net3 _net4 _net5 _ref
+  .Def:LM339N _ref _net1 _net2 _net3 _net4 _net5
+  CCCS:F1 _net10 _net9 _net3 _cnet0 G="1"
+  Idc:IEE _net7 _net3 I="0.0001"
+  Vdc:VI1 _net21 _net1 U="0.75"
+  Vdc:VI2 _net22 _net2 U="0.75"
+  BJT:Q1 _net21 _net9 _net7 _ref Type="pnp" Is="8e-16" Bf="2000" Nf="1" Nr="1" Ikf="0" Ikr="0" Vaf="0" Var="0" Ise="0" Ne="1.5" Isc="0" Nc="2" Br="1" Rbm="0" Irb="0" Cje="0" Vje="0.75" Mje="0.33" Cjc="0" Vjc="0.75" Mjc="0.33" Xcjc="1" Cjs="0" Vjs="0.75" Mjs="0" Fc="0.5" Vtf="0" Tf="0" Xtf="0" Itf="0" Tr="0"
+  BJT:Q2 _net22 _net8 _net7 _ref Type="pnp" Is="8e-16" Bf="2000" Nf="1" Nr="1" Ikf="0" Ikr="0" Vaf="0" Var="0" Ise="0" Ne="1.5" Isc="0" Nc="2" Br="1" Rbm="0" Irb="0" Cje="0" Vje="0.75" Mje="0.33" Cjc="0" Vjc="0.75" Mjc="0.33" Xcjc="1" Cjs="0" Vjs="0.75" Mjs="0" Fc="0.5" Vtf="0" Tf="0" Xtf="0" Itf="0" Tr="0"
+  BJT:Q3 _net8 _net9 _net4 _ref Type="npn" Is="8e-16" Bf="1000" Cjc="1e-15" Tr="8.074e-07" Nf="1" Nr="1" Ikf="0" Ikr="0" Vaf="0" Var="0" Ise="0" Ne="1.5" Isc="0" Nc="2" Br="1" Rbm="0" Irb="0" Cje="0" Vje="0.75" Mje="0.33" Vjc="0.75" Mjc="0.33" Xcjc="1" Cjs="0" Vjs="0.75" Mjs="0" Fc="0.5" Vtf="0" Tf="0" Xtf="0" Itf="0"
+  BJT:Q4 _net8 _net8 _net4 _ref Type="npn" Is="8e-16" Bf="1002" Nf="1" Nr="1" Ikf="0" Ikr="0" Vaf="0" Var="0" Ise="0" Ne="1.5" Isc="0" Nc="2" Br="1" Rbm="0" Irb="0" Cje="0" Vje="0.75" Mje="0.33" Cjc="0" Vjc="0.75" Mjc="0.33" Xcjc="1" Cjs="0" Vjs="0.75" Mjs="0" Fc="0.5" Vtf="0" Tf="0" Xtf="0" Itf="0" Tr="0"
+  VCVS:E1 _net9 _net10 _net4 _net4 G="1"
+  Vdc:V1 _cnet0 _net11 U="0"
+  BJT:Q5 _net11 _net5 _net4 _ref Type="npn" Is="8e-16" Bf="20290" Cjc="1e-15" Tf="9.426e-10" Tr="5.438e-07" Nf="1" Nr="1" Ikf="0" Ikr="0" Vaf="0" Var="0" Ise="0" Ne="1.5" Isc="0" Nc="2" Br="1" Rbm="0" Irb="0" Cje="0" Vje="0.75" Mje="0.33" Vjc="0.75" Mjc="0.33" Xcjc="1" Cjs="0" Vjs="0.75" Mjs="0" Fc="0.5" Vtf="0" Xtf="0" Itf="0"
+  Diode:DP _net3 _net4 Is="8e-16" N="1" M="0.5" Cj0="1e-14" Vj="0.7"
+  R:RP _net3 _net4 R="46300"
+  .Def:End
+  Sub:X1 _ref _net1 _net2 _net3 _net4 _net5 Type="LM339N"
+.Def:End
+  </Model>
+  <Symbol>
+    <.ID -20 74 CM>
+    <Line -20 -40 0 80 #000080 2 1>
+    <Line -20 -40 60 40 #000080 2 1>
+    <Line -20 40 60 -40 #000080 2 1>
+    <Line 40 0 20 0 #000080 2 1>
+    <Line -40 -20 20 0 #000080 2 1>
+    <Line -40 20 20 0 #000080 2 1>
+    <Line -15 20 10 0 #000000 2 1>
+    <Line -10 -25 0 10 #ff0000 0 1>
+    <Line -15 -20 10 0 #ff0000 0 1>
+    <Line 10 -20 0 -20 #000080 2 1>
+    <Line 10 20 0 20 #000080 2 1>
+    <.PortSym -40 -20 1 0>
+    <.PortSym -40 20 2 0>
+    <.PortSym 10 -40 3 0>
+    <.PortSym 10 40 4 0>
+    <.PortSym 60 0 5 0>
+  </Symbol>
+</Component>
+
