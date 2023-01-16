@@ -4,6 +4,8 @@
 
 This repo contains library set for Qucs http://qucs.sourceforge.net and Qucs-S https://ra3xdh.github.io circuit simulators. The foolowing components are presented:
 
+ - `BJT_exteneded.lib` extended BJT library
+ - `Diodes_Schottky` Schottky diodes models
  - `RusDiodes.lib` Russian diodes and Zener diodes
  - `RusBJT_Part1.lib` `RusBJT_Part2.lib` Russian bipolar transistors
  - `RusJFET.lib` Russian junction field-effect transistors (JFETs)
