@@ -16,6 +16,7 @@ This repo contains library set for Qucs http://qucs.sourceforge.net and Qucs-S h
  - `Comparator.lib` LM339 comparator and others
  - `Tubes.lib` different vacuum tubes for audio amplifiers (models provided by @olegkapitonov ). This library works with Qucs-S only
  - `BF998.lib` BF998 and BF998R double gate MOSFET. This library works with Qucs-S only
+ - `PhotovoltaicRelays.lib` Photovoltaic relays. This library works with Qucs-S only
 
 ## Installation
 
