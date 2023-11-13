@@ -4,6 +4,7 @@
 
 This repo contains library set for Qucs http://qucs.sourceforge.net and Qucs-S https://ra3xdh.github.io circuit simulators. The foolowing components are presented:
 
+ - `AudioIC.lib` different audio amplifier ICs like LM386, TDA2030 etc.
  - `BJT_exteneded.lib` extended BJT library
  - `Diodes_Schottky` Schottky diodes models
  - `RusDiodes.lib` Russian diodes and Zener diodes
