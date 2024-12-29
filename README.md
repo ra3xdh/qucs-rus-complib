@@ -18,6 +18,7 @@ This repo contains library set for Qucs http://qucs.sourceforge.net and Qucs-S h
  - `Tubes.lib` different vacuum tubes for audio amplifiers (models provided by @olegkapitonov ). This library works with Qucs-S only
  - `BF998.lib` BF998 and BF998R double gate MOSFET. This library works with Qucs-S only
  - `PhotovoltaicRelays.lib` Photovoltaic relays. This library works with Qucs-S only
+ - `Crystals.lib` -- Quartz crystals backported from PSpice; this library doesn't reflect the measurements and cannot be used for filters design; see https://github.com/ra3xdh/qucs_s/issues/1037
 
 ## Installation
 
