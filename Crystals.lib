@@ -1,0 +1,498 @@
+<Qucs Library 24.4.1 "Crystals">
+
+
+<Component XTAL>
+  <Description>
+10 MHZ Quartz Crystal with Parameters
+Lm Motional Inductnce
+Cm Motional Capacitance
+Rs Series Resistance
+C0 Parallel Capacitance
+R0 Simulator Shunt Resistance
+  </Description>
+  <Model>
+.Def:Crystals_XTAL _net0 _net1 Lm="2.54647909m" Cm="99.4718394f" Rs="6.4" C0="24.8679599p" R0="50MEG"
+C:Cm _net0 _net2 C="Cm" V=""
+L:Lm _net2 _net3 L="Lm" I=""
+C:C0 _net0 _net1 C="C0" V=""
+R:Rs _net3 _net1 R="Rs" Temp="26.85" Tc1="0.0" Tc2="0.0" Tnom="26.85"
+R:R0 _net0 _net1 R="R0" Temp="26.85" Tc1="0.0" Tc2="0.0" Tnom="26.85"
+.Def:End
+  </Model>
+  <Spice>
+.SUBCKT Crystals_XTAL  gnd _net0 _net1 Lm=2.54647909m Cm=99.4718394f Rs=6.4 C0=24.8679599p R0=50MEG 
+Cm _net0 _net2  {CM} 
+Lm _net2 _net3  {LM} 
+C0 _net0 _net1  {C0} 
+Rs _net3 _net1  {RS} tc1=0.0 tc2=0.0 
+R0 _net0 _net1  {R0} tc1=0.0 tc2=0.0 
+.ENDS
+  </Spice>
+  <Symbol>
+    <Line 10 0 30 0 #000080 2 1>
+    <.PortSym -40 0 1 0 P1>
+    <.PortSym 40 0 2 180 P2>
+    <Line 10 -20 0 40 #000080 2 1>
+    <Line -40 0 30 0 #000080 2 1>
+    <Line -10 -20 0 40 #000080 2 1>
+    <Rectangle -5 -30 10 60 #000080 0 1 #c0c0c0 1 0>
+    <.ID -40 34 Y "1=Lm=2.54647909m=Crystal Motional Inductance=" "1=Cm=99.4718394f=Crystal Motional Capacitance=" "1=Rs=6.4=Crystal Series Resistance=" "1=C0=24.8679599p=Crystal Parallel Capacitance=" "1=R0=50MEG=Simulator Shunt Resistance=">
+  </Symbol>
+</Component>
+
+<Component 32768>
+  <Description>
+32.768 KHz Tuning Fork Quartz Crystal
+  </Description>
+  <Model>
+.Def:Crystals_32768 _net0 _net1
+Sub:X1 _net0 _net1 gnd Type="n32768_cir"
+.Def:End
+  </Model>
+  <ModelIncludes "32768.cir.lst">
+  <Spice>
+* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+* 32.768 KHz Tuning Fork Quartz Crystal
+.subckt QZ32768 1 2
+*
+  lm	1	11	4448.72259
+  cm	11	12	5.3027978f
+  rs	12	2	11200
+  c0	1	2	1.84pf
+.ends
+*
+
+.SUBCKT Crystals_32768  gnd _net0 _net1 
+X1 _net0 _net1 QZ32768
+.ENDS
+  </Spice>
+  <Symbol>
+    <Line 10 0 30 0 #000080 2 1>
+    <Line 10 -20 0 40 #000080 2 1>
+    <Line -40 0 30 0 #000080 2 1>
+    <Line -10 -20 0 40 #000080 2 1>
+    <Rectangle -5 -30 10 60 #000080 0 1 #c0c0c0 1 0>
+    <.PortSym -40 0 1 0 P1>
+    <.PortSym 40 0 2 180 P2>
+    <.ID 20 14 Y>
+  </Symbol>
+</Component>
+
+
+<Component 100K>
+  <Description>
+100 KHZ Tuning Fork Quartz Crystal
+  </Description>
+  <Model>
+.Def:Crystals_100K _net0 _net1
+Sub:X1 _net0 _net1 gnd Type="n100K_cir"
+.Def:End
+  </Model>
+  <ModelIncludes "100K.cir.lst">
+  <Spice>
+* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+* 100.000 KHz Tuning Fork Quartz Crystal
+.subckt QZ100K 1 2
+*
+  lm	1	11	1101.32
+  cm	11	12	2.3f
+  rs	12	2	50k
+  c0	1	2	1.35p
+  .ends
+*
+
+.SUBCKT Crystals_100K  gnd _net0 _net1 
+X1 _net0 _net1 QZ100K
+.ENDS
+  </Spice>
+  <Symbol>
+    <Line 10 0 30 0 #000080 2 1>
+    <Line 10 -20 0 40 #000080 2 1>
+    <Line -40 0 30 0 #000080 2 1>
+    <Line -10 -20 0 40 #000080 2 1>
+    <Rectangle -5 -30 10 60 #000080 0 1 #c0c0c0 1 0>
+    <.PortSym -40 0 1 0 P1>
+    <.PortSym 40 0 2 180 P2>
+    <.ID 20 14 Y>
+  </Symbol>
+</Component>
+
+<Component 1M>
+  <Description>
+1.000 MHz Quartz Crystal
+  </Description>
+  <Model>
+.Def:Crystals_1M _net0 _net1
+Sub:X1 _net0 _net1 gnd Type="n1M_cir"
+.Def:End
+  </Model>
+  <ModelIncludes "1M.cir.lst">
+  <Spice>
+* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+* 1.000 MHz Quartz Crystal
+.subckt QZ1M 1 2
+*
+  lm	1	11	2.54647909
+  cm	11	12	9.95357648f
+  rs	12	2	640
+  c0	1	2	2.48839412p
+.ends
+*
+
+.SUBCKT Crystals_1M  gnd _net0 _net1 
+X1 _net0 _net1 QZ1M
+.ENDS
+  </Spice>
+  <Symbol>
+    <Line 10 0 30 0 #000080 2 1>
+    <Line 10 -20 0 40 #000080 2 1>
+    <Line -40 0 30 0 #000080 2 1>
+    <Line -10 -20 0 40 #000080 2 1>
+    <Rectangle -5 -30 10 60 #000080 0 1 #c0c0c0 1 0>
+    <.PortSym -40 0 1 0 P1>
+    <.PortSym 40 0 2 180 P2>
+    <.ID 20 14 Y>
+  </Symbol>
+</Component>
+
+<Component 3_58M>
+  <Description>
+3.579545MHz Quartz Crystal
+  </Description>
+  <Model>
+.Def:Crystals_3_58M _net0 _net1
+Sub:X1 _net0 _net1 gnd Type="n3_58M_cir"
+.Def:End
+  </Model>
+  <ModelIncludes "3_58M.cir.lst">
+  <Spice>
+* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+* 3.579545MHz Quartz Crystal
+.subckt QZ358 1 2
+*
+  lm	1	11	0.0555779237
+  cm	11	12	35.6169600f
+  rs	12	2	50
+  c0	1	2	8.9p
+.ends
+*
+
+.SUBCKT Crystals_3_58M  gnd _net0 _net1 
+X1 _net0 _net1 QZ358
+.ENDS
+  </Spice>
+  <Symbol>
+    <Line 10 0 30 0 #000080 2 1>
+    <Line 10 -20 0 40 #000080 2 1>
+    <Line -40 0 30 0 #000080 2 1>
+    <Line -10 -20 0 40 #000080 2 1>
+    <Rectangle -5 -30 10 60 #000080 0 1 #c0c0c0 1 0>
+    <.PortSym -40 0 1 0 P1>
+    <.PortSym 40 0 2 180 P2>
+    <.ID 20 14 Y>
+  </Symbol>
+</Component>
+
+<Component 4M>
+  <Description>
+4.000 MHz Quartz Crystal
+  </Description>
+  <Model>
+.Def:Crystals_4M _net0 _net1
+Sub:X1 _net0 _net1 gnd Type="n4M_cir"
+.Def:End
+  </Model>
+  <ModelIncludes "4M.cir.lst">
+  <Spice>
+* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+* 4.000 MHz Quartz Crystal
+.subckt QZ4M 1 2
+*
+  lm	1	11	165m
+  cm	11	12	0.009616p
+  rs	12	2	30.3
+  c0	1	2	3.10p
+.ends
+*
+
+.SUBCKT Crystals_4M  gnd _net0 _net1 
+X1 _net0 _net1 QZ4M
+.ENDS
+  </Spice>
+  <Symbol>
+    <Line 10 0 30 0 #000080 2 1>
+    <Line 10 -20 0 40 #000080 2 1>
+    <Line -40 0 30 0 #000080 2 1>
+    <Line -10 -20 0 40 #000080 2 1>
+    <Rectangle -5 -30 10 60 #000080 0 1 #c0c0c0 1 0>
+    <.PortSym -40 0 1 0 P1>
+    <.PortSym 40 0 2 180 P2>
+    <.ID 20 14 Y>
+  </Symbol>
+</Component>
+
+<Component 4_92M>
+  <Description>
+4.9152 MHz Quartz Crystal
+  </Description>
+  <Model>
+.Def:Crystals_4_92M _net0 _net1
+Sub:X1 _net0 _net1 gnd Type="n4_92M_cir"
+.Def:End
+  </Model>
+  <ModelIncludes "4_92M.cir.lst">
+  <Spice>
+* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+* 4.9152 MHz Quartz Crystal
+.subckt QZ49152 1 2
+*
+  lm	1	11	73m
+  cm	11	12	0.0144p
+  rs	12	2	14.3
+  c0	1	2	3.57p
+.ends
+*
+
+.SUBCKT Crystals_4_92M  gnd _net0 _net1 
+X1 _net0 _net1 QZ49152
+.ENDS
+  </Spice>
+  <Symbol>
+    <Line 10 0 30 0 #000080 2 1>
+    <Line 10 -20 0 40 #000080 2 1>
+    <Line -40 0 30 0 #000080 2 1>
+    <Line -10 -20 0 40 #000080 2 1>
+    <Rectangle -5 -30 10 60 #000080 0 1 #c0c0c0 1 0>
+    <.PortSym -40 0 1 0 P1>
+    <.PortSym 40 0 2 180 P2>
+    <.ID 20 14 Y>
+  </Symbol>
+</Component>
+
+<Component 8M>
+  <Description>
+8.000 MHz Quartz Crystal
+  </Description>
+  <Model>
+.Def:Crystals_8M _net0 _net1
+Sub:X1 _net0 _net1 gnd Type="n8M_cir"
+.Def:End
+  </Model>
+  <ModelIncludes "8M.cir.lst">
+  <Spice>
+* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+* 8.000 MHz Quartz Crystal
+.subckt QZ8M 1 2
+*
+  lm	1	11	23.5m
+  cm	11	12	0.01685p
+  rs	12	2	10.1
+  c0	1	2	3.63p
+.ends
+*
+
+.SUBCKT Crystals_8M  gnd _net0 _net1 
+X1 _net0 _net1 QZ8M
+.ENDS
+  </Spice>
+  <Symbol>
+    <Line 10 0 30 0 #000080 2 1>
+    <Line 10 -20 0 40 #000080 2 1>
+    <Line -40 0 30 0 #000080 2 1>
+    <Line -10 -20 0 40 #000080 2 1>
+    <Rectangle -5 -30 10 60 #000080 0 1 #c0c0c0 1 0>
+    <.PortSym -40 0 1 0 P1>
+    <.PortSym 40 0 2 180 P2>
+    <.ID 20 14 Y>
+  </Symbol>
+</Component>
+
+<Component 10M>
+  <Description>
+10.000 MHz Quartz Crystal
+  </Description>
+  <Model>
+.Def:Crystals_10M _net0 _net1
+Sub:X1 _net0 _net1 gnd Type="n10M_cir"
+.Def:End
+  </Model>
+  <ModelIncludes "10M.cir.lst">
+  <Spice>
+* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+* 10.000 MHz Quartz Crystal
+.subckt QZ10M 1 2
+*
+  lm	1	11	2.54647909m
+  cm	11	12	99.4718394f
+  rs	12	2	6.4
+  c0	1	2	24.8679599p
+.ends
+*
+
+.SUBCKT Crystals_10M  gnd _net0 _net1 
+X1 _net0 _net1 QZ10M
+.ENDS
+  </Spice>
+  <Symbol>
+    <Line 10 0 30 0 #000080 2 1>
+    <Line 10 -20 0 40 #000080 2 1>
+    <Line -40 0 30 0 #000080 2 1>
+    <Line -10 -20 0 40 #000080 2 1>
+    <Rectangle -5 -30 10 60 #000080 0 1 #c0c0c0 1 0>
+    <.PortSym -40 0 1 0 P1>
+    <.PortSym 40 0 2 180 P2>
+    <.ID 20 14 Y>
+  </Symbol>
+</Component>
+
+<Component 12M>
+  <Description>
+12.000 MHz Quartz Crystal
+  </Description>
+  <Model>
+.Def:Crystals_12M _net0 _net1
+Sub:X1 _net0 _net1 gnd Type="n12M_cir"
+.Def:End
+  </Model>
+  <ModelIncludes "12M.cir.lst">
+  <Spice>
+* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+* 12.000 MHz Quartz Crystal
+.subckt QZ12M 1 2
+*
+  lm	1	11	12.4m
+  cm	11	12	0.01422p
+  rs	12	2	8.5
+  c0	1	2	4.68p
+.ends
+*
+
+.SUBCKT Crystals_12M  gnd _net0 _net1 
+X1 _net0 _net1 QZ12M
+.ENDS
+  </Spice>
+  <Symbol>
+    <Line 10 0 30 0 #000080 2 1>
+    <Line 10 -20 0 40 #000080 2 1>
+    <Line -40 0 30 0 #000080 2 1>
+    <Line -10 -20 0 40 #000080 2 1>
+    <Rectangle -5 -30 10 60 #000080 0 1 #c0c0c0 1 0>
+    <.PortSym -40 0 1 0 P1>
+    <.PortSym 40 0 2 180 P2>
+    <.ID 20 14 Y>
+  </Symbol>
+</Component>
+
+<Component 16M>
+  <Description>
+16.000 MHz Quartz Crystal
+  </Description>
+  <Model>
+.Def:Crystals_16M _net0 _net1
+Sub:X1 _net0 _net1 gnd Type="n16M_cir"
+.Def:End
+  </Model>
+  <ModelIncludes "16M.cir.lst">
+  <Spice>
+* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+* 16.000 MHz Quartz Crystal
+.subckt QZ16M 1 2
+*
+  lm	1	11	55.51m
+  cm	11	12	0.00178p
+  rs	12	2	20.6
+  c0	1	2	0.87p
+.ends
+*
+
+.SUBCKT Crystals_16M  gnd _net0 _net1 
+X1 _net0 _net1 QZ16M
+.ENDS
+  </Spice>
+  <Symbol>
+    <Line 10 0 30 0 #000080 2 1>
+    <Line 10 -20 0 40 #000080 2 1>
+    <Line -40 0 30 0 #000080 2 1>
+    <Line -10 -20 0 40 #000080 2 1>
+    <Rectangle -5 -30 10 60 #000080 0 1 #c0c0c0 1 0>
+    <.PortSym -40 0 1 0 P1>
+    <.PortSym 40 0 2 180 P2>
+    <.ID 20 14 Y>
+  </Symbol>
+</Component>
+
+<Component 24M>
+  <Description>
+24.000 MHz Quartz Crystal
+  </Description>
+  <Model>
+.Def:Crystals_24M _net0 _net1
+Sub:X1 _net0 _net1 gnd Type="n24M_cir"
+.Def:End
+  </Model>
+  <ModelIncludes "24M.cir.lst">
+  <Spice>
+* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+* 
+.subckt QZ24M 1 2
+*
+  lm	1	11	13.96m
+  cm	11	12	0.00315p
+  rs	12	2	8.23
+  c0	1	2	1.06p
+.ends
+*
+
+.SUBCKT Crystals_24M  gnd _net0 _net1 
+X1 _net0 _net1 QZ24M
+.ENDS
+  </Spice>
+  <Symbol>
+    <Line 10 0 30 0 #000080 2 1>
+    <Line 10 -20 0 40 #000080 2 1>
+    <Line -40 0 30 0 #000080 2 1>
+    <Line -10 -20 0 40 #000080 2 1>
+    <Rectangle -5 -30 10 60 #000080 0 1 #c0c0c0 1 0>
+    <.PortSym -40 0 1 0 P1>
+    <.PortSym 40 0 2 180 P2>
+    <.ID 20 14 Y>
+  </Symbol>
+</Component>
+
+<Component 40M>
+  <Description>
+40.000 MHz Quartz Crystal
+  </Description>
+  <Model>
+.Def:Crystals_40M _net0 _net1
+Sub:X1 _net0 _net1 gnd Type="n40M_cir"
+.Def:End
+  </Model>
+  <ModelIncludes "40M.cir.lst">
+  <Spice>
+* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+* 40.000 MHz Quartz Crystal
+.subckt QZ40M 1 2
+*
+  lm	1	11	3.06m
+  cm	11	12	0.00517p
+  rs	12	2	6.37
+  c0	1	2	1.59p
+.ends
+*
+
+.SUBCKT Crystals_40M  gnd _net0 _net1 
+X1 _net0 _net1 QZ40M
+.ENDS
+  </Spice>
+  <Symbol>
+    <Line 10 0 30 0 #000080 2 1>
+    <Line 10 -20 0 40 #000080 2 1>
+    <Line -40 0 30 0 #000080 2 1>
+    <Line -10 -20 0 40 #000080 2 1>
+    <Rectangle -5 -30 10 60 #000080 0 1 #c0c0c0 1 0>
+    <.PortSym -40 0 1 0 P1>
+    <.PortSym 40 0 2 180 P2>
+    <.ID 20 14 Y>
+  </Symbol>
+</Component>
